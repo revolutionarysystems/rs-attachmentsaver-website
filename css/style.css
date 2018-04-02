@@ -1,0 +1,44 @@
+/* Custom Stylesheet */
+
+/* Materialize overrides */
+body {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+#logo-container {
+  height: 100%;
+  max-width: 50%;
+  padding: 10px;
+}
+img.responsive-img, video.responsive-video {
+  height: 100%;
+}
+.nav-wrapper li a {
+  font-size: large;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+
+/* Helper classes */
+.large {
+  font-size: 120%;
+}
+.medium {
+}
+.small {
+  font-size: 80%;
+}
+.upper {
+  text-transform: uppercase;
+}
