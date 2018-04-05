@@ -58,7 +58,7 @@
     </div>
     <div class="footer-copyright darken-4">
       <div class="container small">
-        v0.2
+        v0.3
       </div>
     </div>
   </footer>
@@ -73,6 +73,13 @@
       // const user = netlifyIdentity.currentUser();
       window.user = netlifyIdentity.currentUser();
       console.log(user);
+
+      netlifyIdentity.on("init", user => console.log(user));
+      netlifyIdentity.on("login", user => console.log(user));
+      netlifyIdentity.on("logout", () => console.log("Logged out"));
+      netlifyIdentity.on("error", err => console.error("Logged out"));
+      netlifyIdentity.on("open", () => console.log("Widget opened"));
+      netlifyIdentity.on("close", () => console.log("Widget closed"));
     });
   </script>
 </body>

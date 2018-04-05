@@ -30,18 +30,27 @@ img.responsive-img, video.responsive-video {
 }
 
 /* Helper classes */
-.large {
+.larger {
   font-size: 120%;
 }
-.medium {
+.smaller {
+  font-size: 80%;
+}
+.small {
+  font-size: 0.8rem;
+}
+.upper {
+  text-transform: uppercase;
 }
 .panel {
   padding: 1em;
   border-radius: 14px;
 }
-.small {
-  font-size: 80%;
+
+/* Page specific classes */
+#dashboard .netlify-identity-user-details {
+  font-size: 0;
 }
-.upper {
-  text-transform: uppercase;
+#dashboard .netlify-identity-user {
+  font-size: 1rem;
 }
