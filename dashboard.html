@@ -37,31 +37,31 @@
 
   <div id="settings" class="section">
     <div class="container">
-      <br>
       <h4 class="header">SETTINGS</h4>
-      <div class="row">
+      <div class="panel white grey-text text-darken-3">
+        <div class="row">
+        </div>
       </div>
-      <br><br>
     </div>
   </div>
 
   <div id="logs" class="section">
     <div class="container">
-      <br>
       <h4 class="header">LOGS</h4>
-      <div class="row">
+      <div class="panel white grey-text text-darken-3">
+        <div class="row">
+        </div>
       </div>
-      <br><br>
     </div>
   </div>
 
   <div id="billing" class="section">
-    <div class="container">
-      <br>
+     <div class="container">
       <h4 class="header">BILLING</h4>
-      <div class="row">
+      <div class="panel white grey-text text-darken-3">
+        <div class="row">
+        </div>
       </div>
-      <br><br>
     </div>
   </div>
 
@@ -69,7 +69,8 @@
     <div class="container">
     </div>
     <div class="footer-copyright darken-4">
-      <div class="container">
+      <div class="container small">
+        v0.1
       </div>
     </div>
   </footer>
@@ -80,9 +81,10 @@
   <script src="js/init.js"></script>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
-    setTimeout(function(){
-      netlifyIdentity.on("init", user => console.log(user));
-    }, 200);
+    $(function(){
+      const user = netlifyIdentity.currentUser();
+      console.log(user);
+    });
   </script>
 </body>
 </html>

@@ -29,12 +29,15 @@ img.responsive-img, video.responsive-video {
   font-size: inherit;
 }
 
-
 /* Helper classes */
 .large {
   font-size: 120%;
 }
 .medium {
+}
+.panel {
+  padding: 1em;
+  border-radius: 14px;
 }
 .small {
   font-size: 80%;
