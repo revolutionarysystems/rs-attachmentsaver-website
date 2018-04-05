@@ -47,10 +47,27 @@ img.responsive-img, video.responsive-video {
   border-radius: 14px;
 }
 
-/* Page specific classes */
-#dashboard .netlify-identity-user-details {
+/* Netlify identity menu formatting */
+.netlify-identity-user-details {
   font-size: 0;
 }
-#dashboard .netlify-identity-user {
+.netlify-identity-user {
+  display: inline-block;
+  max-width: 16em;
+  margin-right: 20px;
   font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.netlify-identity-logout {
+  background-color: rgba(0,0,0,0.15);
+}
+
+.netlify-identity-user:before {
+  content: "account_circle";
+  font-family: 'Material Icons';
+  font-size: 2.25em;
+  vertical-align: middle;
+  padding-right: 10px;
 }

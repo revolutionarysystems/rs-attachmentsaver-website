@@ -58,7 +58,7 @@
     </div>
     <div class="footer-copyright darken-4">
       <div class="container small">
-        v0.3
+        v0.4
       </div>
     </div>
   </footer>
@@ -70,16 +70,14 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
     $(function(){
-      // const user = netlifyIdentity.currentUser();
-      window.user = netlifyIdentity.currentUser();
-      console.log(user);
-
-      netlifyIdentity.on("init", user => console.log(user));
-      netlifyIdentity.on("login", user => console.log(user));
-      netlifyIdentity.on("logout", () => console.log("Logged out"));
+      netlifyIdentity.on("init", user => console.log('init', user));
+      netlifyIdentity.on("login", user => console.log('login', user));
+      // netlifyIdentity.on("logout", () => console.log("Logged out"));
+      netlifyIdentity.on("logout", () => {
+        console.log("Logged out");
+        location.reload();
+      });
       netlifyIdentity.on("error", err => console.error("Logged out"));
-      netlifyIdentity.on("open", () => console.log("Widget opened"));
-      netlifyIdentity.on("close", () => console.log("Widget closed"));
     });
   </script>
 </body>
