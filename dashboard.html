@@ -70,7 +70,8 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
     $(function(){
-      const user = netlifyIdentity.currentUser();
+      // const user = netlifyIdentity.currentUser();
+      window.user = netlifyIdentity.currentUser();
       console.log(user);
     });
   </script>
