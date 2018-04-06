@@ -27,18 +27,6 @@
     <div class="container">
       <h4 class="header">SETTINGS</h4>
       <div class="row panel white grey-text text-darken-3">
-        <form class="col s12">
-          <div class="row">
-            <div class="col s12">
-              Base name:
-              <div class="input-field inline">
-                <input id="fieldBase" type="text" class="validate">
-                <label for="fieldBase">Base name</label>
-                <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -68,10 +56,29 @@
     </div>
     <div class="footer-copyright darken-4">
       <div class="container small">
-        v0.5
+        v0.6
       </div>
     </div>
   </footer>
+
+  <div id="baseModal" class="modal">
+    <div class="modal-content">
+      <h4>Set Base</h4>
+      <p>A bunch of text</p>
+      <form class="row">
+        <div class="col s12">
+          Base name:
+          <div class="input-field inline">
+            <input id="baseField" type="text" class="validate">
+            <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Done</a>
+    </div>
+  </div>
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -80,14 +87,15 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
     $(function(){
-      netlifyIdentity
-        .on("error", err => console.error(err))
-        .on("logout", () => location.reload())
-        .on("login", user => {
+      netlifyIdentity.on("error", err => console.error(err));
+      netlifyIdentity.on("logout", () => location.reload());
+      netlifyIdentity.on("login", user => {
           console.log('logged in', user.email, user.id);
 
           if (!user.user_metadata.base) {
             console.log('set base');
+            var instance = M.Modal.init(document.getElementById('baseModal', {dismissable: false}));
+            instance.open();
           }
       });
     });
