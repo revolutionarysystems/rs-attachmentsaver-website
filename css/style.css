@@ -82,9 +82,12 @@ img.responsive-img, video.responsive-video {
   font-size: 1em !important;
   letter-spacing: 2px;
 }
-#dashboard .tabcontent:empty:before {
-  content: "Nothing to show yet";
+#dashboard .tabContent:empty:before {
+  content: "Nothing to show here yet";
+  display: block;
+  margin-top: 10%;
   text-align: center;
+  opacity: 0.5;
 }
 #dashboard .modal {
   font-size: smaller;
