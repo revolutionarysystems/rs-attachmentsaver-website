@@ -44,6 +44,7 @@ img.responsive-img, video.responsive-video {
   text-transform: uppercase;
 }
 .panel {
+  min-height: 70vw;
   padding: 1em;
   border-radius: 14px;
 }
@@ -64,11 +65,19 @@ img.responsive-img, video.responsive-video {
 .netlify-identity-logout {
   background-color: rgba(0,0,0,0.15);
 }
-
 .netlify-identity-user:before {
   content: "account_circle";
   font-family: 'Material Icons';
   font-size: 2.25em;
   vertical-align: middle;
   padding-right: 10px;
+}
+
+/* Pages */
+#dashboard #uiTabs {
+  margin-top: 2em;
+}
+#dashboard .tabs .tab a {
+  color: #fff !important;
+  font-size: 1em !important;
 }
