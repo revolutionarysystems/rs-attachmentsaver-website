@@ -63,7 +63,7 @@
     </div>
     <div class="footer-copyright darken-4">
       <div class="container small">
-        v0.10
+        v0.11
       </div>
     </div>
   </footer>
@@ -71,17 +71,20 @@
   <div id="baseModal" class="modal modal-fixed-footer">
     <div class="modal-content black-text">
       <h4>Set a base name</h4>
+      <p>Looks like it's your first time here.</p>
       <p>
-        Looks like it's your first time here.<br>
-        Please choose a unique <em>base name</em> that we can use to identify your account.  The base name is used to help form the email addresses that you will set up.
+        Please choose a unique <em>base name</em> that we can use to identify your account.  The base name is used to help form the email addresses that you will set up (e.g. test-<b>[basename</b>@attachmentsaver.com).
       </p>
       <form class="row">
-        <div class="col s12">
+        <div class="col s9">
           Base name:
           <div class="input-field inline">
-            <input id="baseField" type="text" class="validate">
+            <input id="basename" property type="text" class="validate" required minlength="3" maxlength="12" pattern="[a-zA-Z0-9]{3,12}">
             <span class="helper-text" data-error="wrong" data-success="right">A good base name is between 3 and 8 characters long, and must not contain any non-letter characters</span>
           </div>
+        </div>
+        <div class="col s3">
+          <button>check</button>
         </div>
       </form>
     </div>
