@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="dashboard" lang="en" mv-app mv-storage="local">
+<html id="dashboard" lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
@@ -63,12 +63,12 @@
     </div>
     <div class="footer-copyright darken-4">
       <div class="container small">
-        v0.13
+        v0.14
       </div>
     </div>
   </footer>
 
-  <div id="baseModal" class="modal">
+  <div id="baseModal" class="modal" mv-app mv-storage="local">
     <div class="modal-content black-text">
       <h4>Set a base name</h4>
       <p>Looks like it's your first time here.</p>
@@ -164,7 +164,7 @@
   <script>
     var uiTabs = M.Tabs.init(document.getElementById('uiTabs'), {swipeable: true});
   </script>
-  <script src="js/init.js"></script>
+  <!-- <script src="js/init.js"></script> -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
     $(function(){
