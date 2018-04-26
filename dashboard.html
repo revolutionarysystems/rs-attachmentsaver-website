@@ -23,30 +23,30 @@
     </nav>
   </div>
 
-  <div id="settings" class="section">
-    <div class="container">
-      <h4 class="header">SETTINGS</h4>
-      <div class="row panel white grey-text text-darken-3">
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <ul id="uiTabs" class="tabs">
+          <li class="tab col s3"><a class="active" href="#base">Base</a></li>
+          <li class="tab col s3 disabled"><a href="#settings">Settings</a></li>
+          <li class="tab col s3 disabled"><a href="#logs">Logs</a></li>
+          <li class="tab col s3 disabled"><a href="#billing">Billing</a></li>
+        </ul>
       </div>
-    </div>
-  </div>
-
-  <div id="logs" class="section">
-    <div class="container">
-      <h4 class="header">LOGS</h4>
-      <div class="panel white grey-text text-darken-3">
-        <div class="row">
+      <div id="settings" class="col s12">
+        <h4 class="header">SETTINGS</h4>
+        <div class="panel white grey-text text-darken-3">
         </div>
       </div>
-    </div>
-  </div>
-
-  <div id="billing" class="section">
-     <div class="container">
-      <h4 class="header">BILLING</h4>
-      <div class="panel white grey-text text-darken-3">
-        <div class="row">
+      <div id="logs" class="col s12">
+        <h4 class="header">LOGS</h4>
+        <div class="panel white grey-text text-darken-3">
         </div>
+      </div>
+      <div id="billing" class="col s12">
+        <h4 class="header">BILLING</h4>
+        <div class="panel white grey-text text-darken-3">
+        </div>        
       </div>
     </div>
   </div>
@@ -56,13 +56,13 @@
     </div>
     <div class="footer-copyright darken-4">
       <div class="container small">
-        v0.6
+        v0.7
       </div>
     </div>
   </footer>
 
   <div id="baseModal" class="modal">
-    <div class="modal-content">
+    <div class="modal-content black-text">
       <h4>Set Base</h4>
       <p>A bunch of text</p>
       <form class="row">
@@ -83,6 +83,9 @@
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
+  <script>
+    var uiTabs = M.Tabs.init(document.getElementById('uiTabs'), {swipeable: true});
+  </script>
   <script src="js/init.js"></script>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
@@ -92,11 +95,11 @@
       netlifyIdentity.on("login", user => {
           console.log('logged in', user.email, user.id);
 
-          if (!user.user_metadata.base) {
-            console.log('set base');
-            var instance = M.Modal.init(document.getElementById('baseModal', {dismissable: false}));
-            instance.open();
-          }
+          // if (!user.user_metadata.base) {
+          //   console.log('need to set base');
+          //   var instance = M.Modal.init(document.getElementById('baseModal', {dismissible: false}));
+          //   instance.open();
+          // }
       });
     });
   </script>
