@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="dashboard" lang="en">
+<html id="dashboard" lang="en" mv-app>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
@@ -11,6 +11,8 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://get.mavo.io/mavo.css"/>
+  <script src="https://get.mavo.io/mavo.js"></script>
 </head>
 <body class="deep-purple lighten-1 white-text flow-text">
 
@@ -27,7 +29,7 @@
     <div class="row">
       <div class="col s12">
         <ul id="uiTabs" class="tabs transparent">
-          <li class="tab col s3 xdisabled"><a href="#logs">Logs</a></li>
+          <li class="tab col s3 xdisabled"><a href="#activity">Activity</a></li>
           <li class="tab col s3 xdisabled"><a href="#settings">Settings</a></li>
           <li class="tab col s3 xdisabled"><a href="#billing">Billing</a></li>
         </ul>
@@ -37,16 +39,19 @@
 
   <div class="container">
     <div class="row">
-      <div id="logs" class="col s12">
+      <div id="activity" class="col s12">
         <div class="panel white grey-text text-darken-3">
+          <div id="activityContent" class="tabContent"></div>
         </div>
       </div>
       <div id="settings" class="col s12">
         <div class="panel white grey-text text-darken-3">
+          <div id="settingsContent" class="tabContent"></div>
         </div>
       </div>
       <div id="billing" class="col s12">
         <div class="panel white grey-text text-darken-3">
+          <div id="billingContent" class="tabContent"></div>
         </div>        
       </div>
     </div>
@@ -54,11 +59,11 @@
 
   <footer class="page-footer blue-grey darken-2">
     <div class="container small center">
-      A brand of <a href="www.revolutionarysystems.co.uk">Revolutionary Systems</a>
+      <p>A brand of <a href="www.revolutionarysystems.co.uk">Revolutionary Systems</a></p>
     </div>
     <div class="footer-copyright darken-4">
       <div class="container small">
-        v0.9
+        v0.10
       </div>
     </div>
   </footer>

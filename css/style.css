@@ -80,4 +80,12 @@ img.responsive-img, video.responsive-video {
 #dashboard .tabs .tab a {
   color: #fff !important;
   font-size: 1em !important;
+  letter-spacing: 2px;
+}
+#dashboard .tabcontent:empty:before {
+  content: "Nothing to show yet";
+  text-align: center;
+}
+#dashboard .modal {
+  font-size: smaller;
 }
